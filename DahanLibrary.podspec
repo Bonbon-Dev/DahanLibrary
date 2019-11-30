@@ -23,17 +23,6 @@ Pod::Spec.new do |s|
 
     # Core
     s.subspec 'Core' do |core|
-        core.frameworks = 'UIKit'
-        core.libraries = 'c++'
-        core.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-all_load', 'ENABLE_BITCODE' => 'NO'}
-        # core.source_files = [ 
-        #     'DahanLibrary/Classes/Core/**/*.{h,m}',
-        #     'DahanLibrary/Classes/Core/**/*.framework/Headers/*.h',  
-        # ]
-        # core.public_header_files = [
-        #     'DahanLibrary/Classes/Core/**/*.h',
-        #     'DahanLibrary/Classes/Core/**/*.framework/Headers/*.h',
-        # ]
         core.vendored_frameworks = [
             'DahanLibrary/Classes/Core/*.framework',
             'DahanLibrary/Classes/Core/**/*.framework',
@@ -42,5 +31,8 @@ Pod::Spec.new do |s|
             'DahanLibrary/Classes/Core/*.bundle',
             'DahanLibrary/Classes/Core/**/*.bundle',
         ]
+        core.frameworks = 'UIKit'
+        core.libraries = 'c++'
+        core.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-all_load', 'ENABLE_BITCODE' => 'NO'}
     end
 end
