@@ -7,36 +7,40 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'DahanLibrary'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of DahanLibrary.'
+    s.name             = 'DahanLibrary'
+    s.version          = '0.1.0'
+    s.summary          = 'Summary of DahanLibrary.'
+    s.description      = <<-DESC
+                          A description of DahanLibrary.
+                         DESC
+    s.homepage         = 'https://github.com/Bonbon-Dev/DahanLibrary'
+    s.license          = { :type => 'MIT', :file => 'LICENSE' }
+    s.author           = { 'Andy Meng' => 'andy_m129@163.com' }
+    s.source           = { :git => 'https://github.com/Bonbon-Dev/DahanLibrary.git', :tag => s.version.to_s }
+    s.social_media_url = 'https://github.com/Bonbon-Dev'
+    s.ios.deployment_target = '8.0'
+    s.default_subspec = 'Core'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/AndyM129/DahanLibrary'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'AndyM129' => 'andy_m129@163.com' }
-  s.source           = { :git => 'https://github.com/AndyM129/DahanLibrary.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'DahanLibrary/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'DahanLibrary' => ['DahanLibrary/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    # Core
+    s.subspec 'Core' do |core|
+        core.frameworks = 'UIKit'
+        core.libraries = 'c++'
+        core.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-all_load', 'ENABLE_BITCODE' => 'NO'}
+        # core.source_files = [ 
+        #     'DahanLibrary/Classes/Core/**/*.{h,m}',
+        #     'DahanLibrary/Classes/Core/**/*.framework/Headers/*.h',  
+        # ]
+        # core.public_header_files = [
+        #     'DahanLibrary/Classes/Core/**/*.h',
+        #     'DahanLibrary/Classes/Core/**/*.framework/Headers/*.h',
+        # ]
+        core.vendored_frameworks = [
+            'DahanLibrary/Classes/Core/*.framework',
+            'DahanLibrary/Classes/Core/**/*.framework',
+        ]
+        core.resources = [
+            'DahanLibrary/Classes/Core/*.bundle',
+            'DahanLibrary/Classes/Core/**/*.bundle',
+        ]
+    end
 end
