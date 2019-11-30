@@ -9,12 +9,9 @@
 #import "BBTViewController.h"
 #import <dahantclibrary/dahantclibrary.h>
 
-NSString * const APPID = @"8516newworld";
-NSString * const APPKEY = @"456.com";
-NSString * const getPhoneByTokenUrl = @"https://www.dh3t.com/phone/rest/getPhoneNumByToken";
-NSString * const verifyPhoneUrl = @"https://www.dh3t.com/phone/rest/verifyPhoneNumByToken";
-
 @interface BBTViewController ()
+@property(nonatomic, strong) CmccUIModel *cmccUIModel;
+@property(nonatomic, strong) CtccUIModel *ctccUIModel;
 @property(nonatomic, strong) UIButton *oneStepLoginButton;      //!< 一键登录
 @property(nonatomic, strong) UITextField *phoneNumberTextField; //!< 手机号输入
 @property(nonatomic, strong) UIButton *phoneNumberCheckButton;  //!< 号码校验
@@ -40,7 +37,7 @@ NSString * const verifyPhoneUrl = @"https://www.dh3t.com/phone/rest/verifyPhoneN
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [DahantcPhone initializeUser:APPID appKey:APPKEY];
+        
     });
 }
 
@@ -61,6 +58,45 @@ NSString * const verifyPhoneUrl = @"https://www.dh3t.com/phone/rest/verifyPhoneN
 }
 
 #pragma mark - Properties
+
+- (CmccUIModel *)cmccUIModel {
+    if (!_cmccUIModel) {
+        _cmccUIModel = [CmccUIModel.alloc init];
+        _cmccUIModel.currentVC = self;
+        //_cmccUIModel.presentType = DHPresentationDirectionBottom;
+        //_cmccUIModel.authPageBackgroundImage = [UIImage imageNamed:@"authPageBackgroundImage"];
+        //_cmccUIModel.navColor = UINavigationBar.appearance.barTintColor;
+        //_cmccUIModel.navText = [NSAttributedString.alloc initWithString:@"<navText>"];
+        //_cmccUIModel.navReturnImg = UINavigationBar.appearance.backIndicatorImage;
+        //_cmccUIModel.logoImg = [UIImage imageNamed:@"AppIcon"];
+        //_cmccUIModel.logoWidth = 50;
+        //_cmccUIModel.logoHeight = 50;
+        //_cmccUIModel.logoOffsetY = 0;
+        //_cmccUIModel.logoHidden = NO;
+        //_cmccUIModel.logBtnText = [NSMutableAttributedString.alloc initWithString:@"<logBtnText>"];
+        //_cmccUIModel.logBtnOffsetY = @(CGRectGetHeight(UIScreen.mainScreen.bounds) * 0.35);
+        //_cmccUIModel.logBtnOriginX = @(20);
+        //_cmccUIModel.logBtnHeight = 30;
+        //_cmccUIModel.logBtnImgs = nil;
+        //_cmccUIModel.privacyState = true;
+        //_cmccUIModel.sloganText = [NSAttributedString.alloc initWithString:@"<sloganText>" attributes:@{NSForegroundColorAttributeName:UIColor.whiteColor}];
+    }
+    return _cmccUIModel;
+}
+
+- (CtccUIModel *)ctccUIModel {
+    if (!_ctccUIModel) {
+        _ctccUIModel = [CtccUIModel.alloc init];
+        //_ctccUIModel.navText = @"大汉三通";
+        //_ctccUIModel.logoImg = [UIImage imageNamed:@"DemoResource.bundle/logo"];
+        //_ctccUIModel.logBtnText = @"一键登录";
+        //_ctccUIModel.logBtnBackground = 2;
+        //_ctccUIModel.logBtnImgs = @[[UIImage imageNamed:@"DemoResource.bundle/login.jpg"],
+        //                            [UIImage imageNamed:@"DemoResource.bundle/login.jpg"],
+        //                            [UIImage imageNamed:@"DemoResource.bundle/login.jpg"]];
+    }
+    return _ctccUIModel;
+}
 
 - (UIButton *)oneStepLoginButton {
     if (!_oneStepLoginButton) {
@@ -132,24 +168,8 @@ NSString * const verifyPhoneUrl = @"https://www.dh3t.com/phone/rest/verifyPhoneN
 #pragma mark - Data & Networking
 
 - (void)getPhone {
-    CmccUIModel *uiModel= [CmccUIModel.alloc init];
-    uiModel.currentVC = self;
-    uiModel.privacyState = true;
-    uiModel.logoImg = [UIImage imageNamed:@"DemoResource.bundle/logo"];
-    uiModel.navText = [NSAttributedString.alloc initWithString:@"大汉三通"];
-    uiModel.sloganText = [NSAttributedString.alloc initWithString:@"大汉三通提供" attributes:@{NSForegroundColorAttributeName:UIColor.whiteColor}];
-    
-    CtccUIModel *ctccModel = [CtccUIModel.alloc init];
-    ctccModel.navText = @"大汉三通";
-    ctccModel.logoImg = [UIImage imageNamed:@"DemoResource.bundle/logo"];
-    ctccModel.logBtnText = @"一键登录";
-    ctccModel.logBtnBackground = 2;
-    ctccModel.logBtnImgs = @[[UIImage imageNamed:@"DemoResource.bundle/login.jpg"],
-                             [UIImage imageNamed:@"DemoResource.bundle/login.jpg"],
-                             [UIImage imageNamed:@"DemoResource.bundle/login.jpg"]];
-    
     __weak typeof(self) weakSelf = self;
-    [DahantcPhone GetUserPhone:uiModel CtccUIModel:ctccModel phoneListener:^(id listener) {
+    [DahantcPhone GetUserPhone:self.cmccUIModel CtccUIModel:self.ctccUIModel phoneListener:^(id listener) {
         [weakSelf log:[NSString stringWithFormat:@"请求结果: %@", listener]];
         
         if([@"success" isEqualToString:listener[@"result"]]){

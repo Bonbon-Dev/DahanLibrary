@@ -19,3 +19,8 @@
 #import <YYCategories.h>
 #import <AMKCategories/UIViewController+AMKNavigationControllerWithCallback.h>
 #import "BBTHelper.h"
+
+static NSString * const APPID = @"8516newworld";
+static NSString * const APPKEY = @"456.com";
+static NSString * const getPhoneByTokenUrl = @"https://www.dh3t.com/phone/rest/getPhoneNumByToken";
+static NSString * const verifyPhoneUrl = @"https://www.dh3t.com/phone/rest/verifyPhoneNumByToken";

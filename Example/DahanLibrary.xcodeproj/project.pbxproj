@@ -24,6 +24,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		88F4F27323924DB800B9520F /* BBTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F4F27223924DB800B9520F /* BBTHelper.m */; };
+		88F4F27C23926B5900B9520F /* DHCmccUIConfigs.json in Resources */ = {isa = PBXBuildFile; fileRef = 88F4F27B23926B5900B9520F /* DHCmccUIConfigs.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88F4F27123924DB800B9520F /* BBTHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTHelper.h; sourceTree = "<group>"; };
 		88F4F27223924DB800B9520F /* BBTHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTHelper.m; sourceTree = "<group>"; };
+		88F4F27B23926B5900B9520F /* DHCmccUIConfigs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DHCmccUIConfigs.json; sourceTree = "<group>"; };
 		8B8F38CEB9FEE29D9D5E708D /* Pods-DahanLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahanLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-DahanLibrary_Example/Pods-DahanLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D1FD91BA0CE1B115B1B1709D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FA9E822BF421F90A5A83449D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				88F4F27B23926B5900B9520F /* DHCmccUIConfigs.json */,
 			);
 			name = "Example for DahanLibrary";
 			path = DahanLibrary;
@@ -244,7 +247,7 @@
 				ORGANIZATIONNAME = AndyM129;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 9X349G8KD4;
+						DevelopmentTeam = 6SRSWZ22NX;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -280,6 +283,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				88F4F27C23926B5900B9520F /* DHCmccUIConfigs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,12 +484,12 @@
 			baseConfigurationReference = 56FCCEFD1BAA41A27A9ABC33 /* Pods-DahanLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9X349G8KD4;
+				DEVELOPMENT_TEAM = 6SRSWZ22NX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DahanLibrary/DahanLibrary-Prefix.pch";
 				INFOPLIST_FILE = "DahanLibrary/DahanLibrary-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baozi.BangBangTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -497,12 +501,12 @@
 			baseConfigurationReference = 8B8F38CEB9FEE29D9D5E708D /* Pods-DahanLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9X349G8KD4;
+				DEVELOPMENT_TEAM = 6SRSWZ22NX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DahanLibrary/DahanLibrary-Prefix.pch";
 				INFOPLIST_FILE = "DahanLibrary/DahanLibrary-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baozi.BangBangTang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

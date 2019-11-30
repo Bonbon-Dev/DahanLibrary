@@ -7,12 +7,15 @@
 //
 
 #import "BBTAppDelegate.h"
+#import <dahantclibrary/dahantclibrary.h>
 #import <FLEX.h>
+
 @implementation BBTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [DahantcPhone initializeUser:APPID appKey:APPKEY];
     return YES;
 }
 

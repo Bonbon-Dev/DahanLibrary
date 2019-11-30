@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface NSData (BBTPrivateExtensionMethods)
-- (NSString *)bbt_md5String;
+- (NSString *_Nullable)bbt_md5String;
 @end
 
 
 @interface NSString (BBTPrivateExtensionMethods)
-- (NSString *)bbt_md5String;
+- (NSString *_Nullable)bbt_md5String;
 @end
 
 
