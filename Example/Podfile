@@ -1,13 +1,10 @@
-use_frameworks!
-
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
+inhibit_all_warnings!
 
 target 'DahanLibrary_Example' do
   pod 'DahanLibrary', :path => '../'
-
-  target 'DahanLibrary_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'Masonry' , '1.1.0'
+  pod 'YYCategories', '1.0.4'
+  pod 'AMKCategories'
 end
