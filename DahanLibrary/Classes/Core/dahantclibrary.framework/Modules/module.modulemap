@@ -1,0 +1,6 @@
+framework module dahantclibrary {
+  umbrella header "dahantclibrary.h"
+
+  export *
+  module * { export * }
+}
