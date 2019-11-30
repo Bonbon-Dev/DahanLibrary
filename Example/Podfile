@@ -7,4 +7,5 @@ target 'DahanLibrary_Example' do
   pod 'Masonry' , '1.1.0'
   pod 'YYCategories', '1.0.4'
   pod 'AMKCategories'
+  pod 'FLEX'
 end
