@@ -35,6 +35,32 @@ NS_ASSUME_NONNULL_BEGIN
 /**LOGO图片*/
 @property (nonatomic,strong) UIImage *logoImg;
 
+/**LOGO图片Y偏移量
+ 该控件顶部（top）相对于屏幕（safeArea）的顶部（top）的距离 （下同）
+ */
+@property (nonatomic,assign) CGFloat logoOffsetY;
+/**LOGO图片是否隐藏*/
+@property (nonatomic,assign) BOOL logoHidden;
+
+/**LOGO宽度*/
+@property (nonatomic,assign) CGFloat logoWidth;
+/**LOGO高度*/
+@property (nonatomic,assign) CGFloat logoHeight;
+
+/**手机号码字体颜色*/
+@property (nonatomic,strong) UIColor *numberColor;
+/**手机号码字体大小*/
+@property (nonatomic,assign) CGFloat numberTextSize;
+/**号码栏Y偏移量*/
+@property (nonatomic,assign) CGFloat numFieldOffsetY;
+
+/**品牌logo图片及标签的Y偏移量*/
+@property (nonatomic,assign) CGFloat brandLabelOffsetY;
+/**品牌标签文字颜色*/
+@property (nonatomic,strong) UIColor *brandLabelTextColor;
+/**品牌标签字体大小*/
+@property (nonatomic,assign) CGFloat brandLabelTextSize;
+
 /**登录按钮文本*/
 @property (nonatomic,strong) NSString *logBtnText;
 
