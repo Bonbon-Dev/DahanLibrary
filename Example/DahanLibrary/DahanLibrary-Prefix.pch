@@ -17,7 +17,6 @@
 
 #import <Masonry.h>
 #import <YYCategories.h>
-#import <AMKCategories/UIViewController+AMKNavigationControllerWithCallback.h>
 #import "BBTHelper.h"
 
 static NSString * const APPID = @"8516newworld";

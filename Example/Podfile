@@ -6,6 +6,6 @@ target 'DahanLibrary_Example' do
   pod 'DahanLibrary', :path => '../'
   pod 'Masonry' , '1.1.0'
   pod 'YYCategories', '1.0.4'
-  pod 'AMKCategories'
+  pod 'AMKLocaleDescription'
   pod 'FLEX'
 end
