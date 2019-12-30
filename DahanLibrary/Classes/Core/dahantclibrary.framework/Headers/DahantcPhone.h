@@ -10,8 +10,12 @@
 
 #import <UIKit/UIKit.h>
 
+
 #import "CmccUIModel.h"
 #import "CtccUIModel.h"
+
+@class UACustomModel;
+@class EAccountOpenPageConfig;
 @interface DahantcPhone : NSObject
 
 /**
@@ -31,11 +35,15 @@
 + (void)initializeUser:(NSString *)appId appKey:(NSString *)appKey;
 
 + (void) GetUserPhone :(CmccUIModel *)CmccUIModel
-         CtccUIModel:(CtccUIModel *)CtccUIModel
+           CtccUIModel:(CtccUIModel *)CtccUIModel
        phoneListener  : (void(^)(id listener))phoneListener;
 
++ (void) GetUserPhoneNew :(UACustomModel *)UACustomModel
+   EAccountOpenPageConfig:(EAccountOpenPageConfig *)EAccountOpenPageConfig
+          phoneListener  : (void(^)(id listener))phoneListener;
+
 + (void) GetAccessCode :(UIViewController *)vc
-       phoneListener  : (void(^)(id listener))phoneListener;
+        phoneListener  : (void(^)(id listener))phoneListener;
 
 +(void)sendHttp:(NSString *)reqUrl reqData:(NSString*)reqData  handleResp:(void (^)(id respDate))handleResp;
 
