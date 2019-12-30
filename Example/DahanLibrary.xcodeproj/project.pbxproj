@@ -327,7 +327,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DahanLibrary_Example/Pods-DahanLibrary_Example-resources.sh",
-				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/DemoResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/EAccountOpenPageResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/HTMLResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/TYRZResource.bundle",
@@ -336,7 +335,6 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DemoResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EAccountOpenPageResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HTMLResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TYRZResource.bundle",
