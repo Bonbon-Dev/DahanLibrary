@@ -4,6 +4,7 @@ inhibit_all_warnings!
 
 target 'DahanLibrary_Example' do
   pod 'DahanLibrary', :path => '../'
+  pod 'DahanLibrary/Bugly', :path => '../'
   pod 'Masonry' , '1.1.0'
   pod 'YYCategories', '1.0.4'
   pod 'AMKLocaleDescription'

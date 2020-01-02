@@ -8,6 +8,7 @@
 
 #import "BBTAppDelegate.h"
 #import <dahantclibrary/dahantclibrary.h>
+#import <Bugly/Bugly.h>
 #import <FLEX.h>
 
 @implementation BBTAppDelegate
@@ -15,6 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Bugly startWithAppId:@"99e74ce8c2"];
     [DahantcPhone initializeUser:APPID appKey:APPKEY];
     return YES;
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'DahanLibrary'
-    s.version          = '0.1.3'
+    s.version          = '0.1.4'
     s.summary          = 'Summary of DahanLibrary.'
     s.description      = <<-DESC
                           A description of DahanLibrary.
@@ -20,6 +20,15 @@ Pod::Spec.new do |s|
     s.social_media_url = 'https://github.com/Bonbon-Dev'
     s.ios.deployment_target = '8.0'
     s.default_subspec = 'Core'
+
+    # Bugly
+    s.subspec 'Bugly' do |bugly|
+        bugly.source_files = 'DahanLibrary/Classes/Bugly/*.{h,m}'
+        bugly.public_header_files = 'DahanLibrary/Classes/Bugly/*.h'
+        bugly.dependency 'DahanLibrary/Core'
+        bugly.dependency 'AMKCategories/Foundation/NSObject/MethodSwizzling'
+        bugly.dependency 'Bugly'    
+    end
 
     # Core
     s.subspec 'Core' do |core|

@@ -483,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6SRSWZ22NX;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DahanLibrary/DahanLibrary-Prefix.pch";
 				INFOPLIST_FILE = "DahanLibrary/DahanLibrary-Info.plist";
@@ -500,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6SRSWZ22NX;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DahanLibrary/DahanLibrary-Prefix.pch";
 				INFOPLIST_FILE = "DahanLibrary/DahanLibrary-Info.plist";
