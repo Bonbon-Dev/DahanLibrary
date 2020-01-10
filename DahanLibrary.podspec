@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'DahanLibrary'
-    s.version          = '0.1.4'
+    s.version          = '0.1.5'
     s.summary          = 'Summary of DahanLibrary.'
     s.description      = <<-DESC
                           A description of DahanLibrary.
@@ -29,7 +29,17 @@ Pod::Spec.new do |s|
         bugly.dependency 'AMKCategories/Foundation/NSObject/MethodSwizzling'
         bugly.dependency 'Bugly'    
     end
-
+    
+    # UMeng
+    s.subspec 'UMeng' do |umeng|
+      umeng.source_files = 'DahanLibrary/Classes/UMeng/*.{h,m}'
+      umeng.public_header_files = 'DahanLibrary/Classes/UMeng/*.h'
+      umeng.dependency 'DahanLibrary/Core'
+      umeng.dependency 'AMKCategories/Foundation/NSObject/MethodSwizzling'
+      umeng.dependency 'UMCCommon'
+      umeng.dependency 'UMCAnalytics'
+    end
+    
     # Core
     s.subspec 'Core' do |core|
         core.vendored_frameworks = [

@@ -8,6 +8,7 @@
 
 #import "BBTAppDelegate.h"
 #import <dahantclibrary/dahantclibrary.h>
+#import <UMCommon/UMCommon.h>
 #import <Bugly/Bugly.h>
 #import <FLEX.h>
 
@@ -17,6 +18,7 @@
 {
     // Override point for customization after application launch.
     [Bugly startWithAppId:@"99e74ce8c2"];
+    [UMConfigure initWithAppkey:@"545758dcfd98c51438000a6d" channel:@"App Store"];
     [DahantcPhone initializeUser:APPID appKey:APPKEY];
     return YES;
 }
