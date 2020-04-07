@@ -327,17 +327,22 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DahanLibrary_Example/Pods-DahanLibrary_Example-resources.sh",
+				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/DemoResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/EAccountOpenPageResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/HTMLResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/TYRZResource.bundle",
+				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/uni_account_login_res.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/dahantclibrary.framework/EAccountOpenPageResource.bundle",
 				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/dahantclibrary.framework/HTMLResource.bundle",
+				"${PODS_ROOT}/../../DahanLibrary/Classes/Core/dahantclibrary.framework/uni_account_login_res.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DemoResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EAccountOpenPageResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HTMLResource.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TYRZResource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/uni_account_login_res.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

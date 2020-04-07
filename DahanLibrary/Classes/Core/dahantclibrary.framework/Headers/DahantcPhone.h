@@ -16,6 +16,7 @@
 
 @class UACustomModel;
 @class EAccountOpenPageConfig;
+@class UniAuthViewModel;
 @interface DahantcPhone : NSObject
 
 /**
@@ -34,14 +35,25 @@
  */
 + (void)initializeUser:(NSString *)appId appKey:(NSString *)appKey;
 
+/*
+ 一键登录，DHTC封装的对象
+ */
 + (void) GetUserPhone :(CmccUIModel *)CmccUIModel
            CtccUIModel:(CtccUIModel *)CtccUIModel
        phoneListener  : (void(^)(id listener))phoneListener;
 
+/*
+一键登录，运营商原生Model
+*/
 + (void) GetUserPhoneNew :(UACustomModel *)UACustomModel
+   UniAuthViewModel:(UniAuthViewModel *) UniAuthViewModel
    EAccountOpenPageConfig:(EAccountOpenPageConfig *)EAccountOpenPageConfig
+   UIViewController:(UIViewController *) currentVC
           phoneListener  : (void(^)(id listener))phoneListener;
 
+/*
+本机校验
+*/
 + (void) GetAccessCode :(UIViewController *)vc
         phoneListener  : (void(^)(id listener))phoneListener;
 

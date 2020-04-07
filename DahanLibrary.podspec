@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'DahanLibrary'
-    s.version          = '0.1.5'
+    s.version          = '1.0.3.1'
     s.summary          = 'Summary of DahanLibrary.'
     s.description      = <<-DESC
                           A description of DahanLibrary.
